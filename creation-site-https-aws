@@ -91,3 +91,5 @@ sudo certbot renew --dry-run
 Dans la commande certbot --apache, il y a un email à fournir et surtout le domaine acheté à OVH.
 La sécurisation du transit se fera donc ensuite avec une mise en place des certificats, le site est donc sécurisé, pour finir, il ne faudra qu'ouvrir glpi.conf et y faire une redirection en https pour forcer son utilisation
 voir image_5
+
+tout l'historique est dans mon fichier "history"
