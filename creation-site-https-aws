@@ -1,7 +1,7 @@
 SALGUEIRO raphael, procédure expliquant la mise en place des prérequis pour le cefim
 # **AWS :**
 
-![[Pasted image 20250204104625.png]]
+voir image_1
 # **mise en place du site web :**
 installation des premières dépendances pour la mise en place initiale d'un site en http 
 
@@ -68,15 +68,15 @@ application des droits a glpi pour éviter les gros problèmes avec "chmod"
 # **mise en place HTTPS**
 
 en premier temps pour certbot on va prendre un nom de domaine chez aws :
-![[Pasted image 20250204105021.png]]
+voir image_2
 
 on change la zone dns pour mettre la bonne adresse ip du serveur web pour une bonne redirection 
 
-![[Pasted image 20250204105117.png]]
+voir image_3
 
 après quelques temps le nom de domaine fonctionne bien (il faut changer celui du glpi.conf pour qu'il soit le même que le nom de domaine acheté)
 
-![[Pasted image 20250204105243.png]]
+voir image_4
 
 #### **installation de snap et certbot :** 
 ```
@@ -90,4 +90,4 @@ sudo certbot renew --dry-run
 
 Dans la commande certbot --apache, il y a un email à fournir et surtout le domaine acheté à OVH.
 La sécurisation du transit se fera donc ensuite avec une mise en place des certificats, le site est donc sécurisé, pour finir, il ne faudra qu'ouvrir glpi.conf et y faire une redirection en https pour forcer son utilisation
-![[Pasted image 20250204110000.png]]
+voir image_5
