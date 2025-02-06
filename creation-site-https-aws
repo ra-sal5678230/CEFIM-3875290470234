@@ -92,4 +92,21 @@ Dans la commande certbot --apache, il y a un email à fournir et surtout le doma
 La sécurisation du transit se fera donc ensuite avec une mise en place des certificats, le site est donc sécurisé, pour finir, il ne faudra qu'ouvrir glpi.conf et y faire une redirection en https pour forcer son utilisation
 voir image_5
 
-tout l'historique est dans mon fichier "history"
+pour finir, l'installation de webmin qui est quelque peut problèmatique étant donné qu'il faut rajouter nos propres sources.list :
+
+wget -qO - http://www.webmin.com/jcameron-key.asc | sudo apt-key add -
+sudo sh -c 'echo "deb http://download.webmin.com/download/repository sarge contrib" > \
+/etc/apt/sources.list.d/webmin.list
+
+Maitenant, on peut l'installer avec :
+
+sudo apt install webmin
+
+et on l'active avec :
+sudo systemctl start webmin
+sudo systemctl enable webmin
+
+
+
+
+tout l'historique de toutes les commandes passées est dans mon fichier "historique"
